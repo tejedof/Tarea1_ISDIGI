@@ -1,0 +1,91 @@
+// --------------------------------------------------------------------
+// Universitat Politècnica de València
+// Escuela Técnica Superior de Ingenieros de Telecomunicación
+// --------------------------------------------------------------------
+// Integración de Sistemas Digitales
+// Curso 2022 - 2023
+// --------------------------------------------------------------------
+// Nombre del archivo: FIFO.v
+//
+// Descripción: Este código Verilog implementa el la FIFO solicitada es el top de la jerarquia.
+// Cuenta con los siguientes modulos:
+//  1.  DataPath_FIFO, datapath del diseño.
+//  2.  FSM_FIFO, máquina de estados del diseño
+//
+//  Y con la siguiente relación de entradas y salidas:
+//  1.  CLOCK, Reloj activo por flanco de subida
+//  2.  RESET_N, Reset activo a nivel bajo y asincrono
+//  3.	CLEAR_N, Reset activo a nivel bajo y sincrono
+//	4.  F_FULL_N, Flag activo a nivel bajo que nos indica cuando la memoria esta llena
+//	5.  F_EMPTY_N, Flag activo a nivel bajo que nos indica cuando la memoria esta vacia
+//	6.  DATA_OUT, bus de salida de datos
+//  7.  WRITE, se activa cuando se debe escribir
+//  8.  READ, se activa cuando se debe leer
+//  9.  DATA_IN, bus de entrada de datos
+//  10. USE_DW, indica las posiciones de memoria ocupadas
+// --------------------------------------------------------------------
+// Versión: V1.0 | Fecha Modificación: 09/10/2022
+//
+// Autores: Carlos Tejedo Fuster y Jaime Oviedo Goberna 
+// Ordenador de trabajo: Personal
+//
+// --------------------------------------------------------------------
+
+module FIFO(
+	input [7:0] DATA_IN,
+	input READ, WRITE, CLEAR_N, RESET_N, CLOCK,
+	output[7:0] DATA_OUT,
+	output [4:0] USE_DW,
+	output F_FULL_N, F_EMPTY_N
+);
+
+
+wire e_countr, e_countw,e_USE_DW, UD_USE_DW;
+wire WREN, RDEN, control;
+wire RESET;
+
+//PUERTA AND PARA RESET_N Y CLEAR_N
+//Nos servira para poder unificar las señales
+and(RESET, RESET_N, CLEAR_N);
+
+
+DataPath_FIFO DataPath_FIFO
+(
+	.CLK(CLOCK) ,	
+	.RST_n(RESET) ,	
+	.e_countr(e_countr) ,	
+	.e_countw(e_countw) ,
+	.e_USE_DW(e_USE_DW) ,
+	.UD_USE_DW(UD_USE_DW) ,
+	.WREN(WREN) ,
+	.RDEN(RDEN) ,
+	.data_in(DATA_IN) ,
+	.USE_DW(USE_DW) ,
+	.control(control),
+	.data_out(DATA_OUT) 
+);
+
+
+FSM_FIFO FSM_FIFO
+(
+	.CLK(CLOCK) ,	
+	.RESET_N(RESET) ,
+	.CLEAR_N(RESET) ,
+	.READ(READ) ,	
+	.control(control),
+	.WRITE(WRITE) ,	
+	.USE_DW(USE_DW) ,
+	.F_FULL_N(F_FULL_N) ,
+	.F_EMPTY_N(F_EMPTY_N) ,
+	.UD_USE_DW(UD_USE_DW) ,	
+	.e_countw(e_countw) ,	
+	.e_countr(e_countr) ,	
+	.e_USE_DW(e_USE_DW) ,	
+	.WREN(WREN) ,	
+	.RDEN(RDEN) 	
+);
+
+
+
+
+endmodule 

@@ -1,0 +1,166 @@
+m255
+K4
+z2
+!s11f vlog 2020.2 2020.04, Apr 19 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carlo/Desktop/Tarea1_ISDIGI
+T_opt
+!s110 1665410286
+V4:z?bM^bhl?bR0L46MK4B3
+04 7 4 work tb_FIFO fast 0
+=2-fc34974b6e80-634424ed-3d4-a38
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.2;71
+vcontador
+Z2 !s110 1665409723
+!i10b 1
+!s100 6[CO^UNQzPX1:YBC1G;FH3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I41GDJ33a]I:UKE[nS3FU13
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1652979151
+8C:/Users/carlo/Desktop/Tarea1_ISDIGI/contador.v
+FC:/Users/carlo/Desktop/Tarea1_ISDIGI/contador.v
+!i122 11
+L0 26 43
+Z5 OL;L;2020.2;71
+r1
+!s85 0
+31
+Z6 !s108 1665409723.000000
+!s107 C:/Users/carlo/Desktop/Tarea1_ISDIGI/contador.v|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/carlo/Desktop/Tarea1_ISDIGI/contador.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vDataPath_FIFO
+R2
+!i10b 1
+!s100 kOhT1^KoPM@6JLagT7_OV1
+R3
+I<iFh[[9?HFY=AeH;Effk`3
+R4
+R0
+w1665406928
+8C:/Users/carlo/Desktop/Tarea1_ISDIGI/DataPath_FIFO.v
+FC:/Users/carlo/Desktop/Tarea1_ISDIGI/DataPath_FIFO.v
+!i122 12
+L0 38 77
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/carlo/Desktop/Tarea1_ISDIGI/DataPath_FIFO.v|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/carlo/Desktop/Tarea1_ISDIGI/DataPath_FIFO.v|
+!i113 0
+R7
+R1
+n@data@path_@f@i@f@o
+vFIFO
+R2
+!i10b 1
+!s100 ^YC5B54SaGb8dzMO>oCHn2
+R3
+I8clQ2H>PTfHKHVl[S?YbP1
+R4
+R0
+w1665309177
+8C:/Users/carlo/Desktop/Tarea1_ISDIGI/FIFO.v
+FC:/Users/carlo/Desktop/Tarea1_ISDIGI/FIFO.v
+!i122 13
+L0 34 58
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/carlo/Desktop/Tarea1_ISDIGI/FIFO.v|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/carlo/Desktop/Tarea1_ISDIGI/FIFO.v|
+!i113 0
+R7
+R1
+n@f@i@f@o
+vFSM_FIFO
+!s110 1665410277
+!i10b 1
+!s100 MDCG3HVD9Dk6hUM5cVd[P2
+R3
+IiCj44:>@zoAm37;k?H28d0
+R4
+R0
+w1665410270
+8C:/Users/carlo/Desktop/Tarea1_ISDIGI/FSM_FIFO.v
+FC:/Users/carlo/Desktop/Tarea1_ISDIGI/FSM_FIFO.v
+!i122 16
+L0 39 236
+R5
+r1
+!s85 0
+31
+!s108 1665410277.000000
+!s107 C:/Users/carlo/Desktop/Tarea1_ISDIGI/FSM_FIFO.v|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/carlo/Desktop/Tarea1_ISDIGI/FSM_FIFO.v|
+!i113 0
+R7
+R1
+n@f@s@m_@f@i@f@o
+vram_dp
+Z8 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1665409724
+!i10b 1
+!s100 ]_IYFHS;GmH7K[`EBL<NZ1
+R3
+IARikilzDhg3aWc6IYD[X_0
+R4
+S1
+R0
+w1663662644
+8C:/Users/carlo/Desktop/Tarea1_ISDIGI/ram_dp.sv
+FC:/Users/carlo/Desktop/Tarea1_ISDIGI/ram_dp.sv
+!i122 14
+L0 1 20
+R5
+r1
+!s85 0
+31
+!s108 1665409724.000000
+!s107 C:/Users/carlo/Desktop/Tarea1_ISDIGI/ram_dp.sv|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/carlo/Desktop/Tarea1_ISDIGI/ram_dp.sv|
+!i113 0
+R7
+R1
+vtb_FIFO
+R8
+!s110 1665410280
+!i10b 1
+!s100 XoP>I=IY_:9>nJNE]SJbG1
+R3
+IMIHO:`zX_oIEzZ1:cRzg^0
+R4
+S1
+R0
+w1665410159
+8C:/Users/carlo/Desktop/Tarea1_ISDIGI/tb_fifo_SV.sv
+FC:/Users/carlo/Desktop/Tarea1_ISDIGI/tb_fifo_SV.sv
+!i122 17
+L0 22 391
+R5
+r1
+!s85 0
+31
+!s108 1665410280.000000
+!s107 C:/Users/carlo/Desktop/Tarea1_ISDIGI/tb_fifo_SV.sv|
+!s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/carlo/Desktop/Tarea1_ISDIGI/tb_fifo_SV.sv|
+!i113 0
+R7
+R1
+ntb_@f@i@f@o
