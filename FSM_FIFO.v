@@ -266,9 +266,9 @@ always @(state, READ, WRITE)
 //endproperty
 //sobrevaciado:assert property  (vaciado) else $error("leyendo de una fifo vacia");
 
-always@(posedge CLK)
-begin
-	if(READ==1'b1 && F_EMPTY_N==1'b0 && WRITE==1'b0)
-		$display("leyendo de una fifo vacia");
-end
+//always@(posedge CLK)
+//begin
+//	if(READ==1'b1 && F_EMPTY_N==1'b0 && WRITE==1'b0)
+//		$display("leyendo de una fifo vacia");
+//end
 endmodule 

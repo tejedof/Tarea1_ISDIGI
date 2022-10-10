@@ -85,6 +85,12 @@ FSM_FIFO FSM_FIFO
 	.RDEN(RDEN) 	
 );
 
+property vaciado; //opcion para reuso de propiedades
+	
+	@(posedge CLK) not (READ==1'b1 && F_EMPTY_N==1'b0 && WRITE==1'b0);
+	
+endproperty
+sobrevaciado:assert property  (vaciado) else $error("leyendo de una fifo vacia");
 
 
 
